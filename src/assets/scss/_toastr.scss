@@ -1,0 +1,83 @@
+// Toastr
+$toastr-success-bg: #f6ffed;
+$toastr-success-border: #b7eb8f;
+$toastr-success-icon: "../images/toastr/success-icon.svg";
+
+$toastr-info-bg: #e6f7ff;
+$toastr-info-border: #91d5ff;
+$toastr-info-icon: "../images/toastr/info-icon.svg";
+
+$toastr-warning-bg: #fffbe6;
+$toastr-warning-border: #ffe58f;
+$toastr-warning-icon: "../images/toastr/warning-icon.svg";
+
+$toastr-error-bg: #fff1f0;
+$toastr-error-border: #ffccc7;
+$toastr-error-icon: "../images/toastr/error-icon.svg";
+
+#toast-container {
+    .toast {
+      box-shadow: none !important;
+      color: $accent-blue-100 !important;
+      font-size: 16px;
+      
+      border-radius: 2px !important;
+      background-repeat: no-repeat !important;
+      background-position: 15px center !important;
+      background-size: 20px !important;
+  
+      &.toast-success {
+        background-image: url($toastr-success-icon) !important;
+        background: $toastr-success-bg;
+        border: 1px solid $toastr-success-border;
+      }
+  
+      &.toast-info {
+        background-image: url($toastr-info-icon) !important;
+        background: $toastr-info-bg;
+        border: 1px solid $toastr-info-border;
+      }
+  
+      &.toast-warning {
+        background-image: url($toastr-warning-icon) !important;
+        background: $toastr-warning-bg;
+        border: 1px solid $toastr-warning-border;
+      }
+  
+      &.toast-error {
+        background-image: url($toastr-error-icon) !important;
+        background: $toastr-error-bg;
+        border: 1px solid $toastr-error-border;
+      }
+  
+      .toast-close-button {
+        color: transparent;
+        mask-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 14 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.86859 7.99997L11.9702 3.11091C12.0389 3.02966 11.9811 2.90622 11.8748 2.90622H10.628C10.5545 2.90622 10.4842 2.93903 10.4358 2.99528L7.05297 7.02809L3.67015 2.99528C3.62328 2.93903 3.55297 2.90622 3.47797 2.90622H2.23109C2.12484 2.90622 2.06703 3.02966 2.13578 3.11091L6.23734 7.99997L2.13578 12.889C2.12038 12.9071 2.1105 12.9293 2.10731 12.9528C2.10412 12.9764 2.10776 13.0004 2.1178 13.0219C2.12783 13.0435 2.14384 13.0617 2.16392 13.0744C2.18401 13.0872 2.20732 13.0938 2.23109 13.0937H3.47797C3.5514 13.0937 3.62172 13.0609 3.67015 13.0047L7.05297 8.97184L10.4358 13.0047C10.4827 13.0609 10.553 13.0937 10.628 13.0937H11.8748C11.9811 13.0937 12.0389 12.9703 11.9702 12.889L7.86859 7.99997Z' fill='black' fill-opacity='0.45'/%3E%3C/svg%3E%0A");
+        mask-size: 20px;
+        width: 20px;
+        padding: 0px !important;
+        text-align: center;
+        height: 20px;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        text-shadow: none;
+        background: $accent-blue-100;
+        position: absolute;
+        top: calc(50% - 10px);
+        bottom: auto;
+        right: 15px;
+  
+        &:focus,
+        &:hover {
+          color: transparent;
+          opacity: 1;
+          background: $accent-blue-200;
+        }
+      }
+  
+      .toast-message {
+        width: calc(100% - 20px);
+      }
+    }
+  }
+  
